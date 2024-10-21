@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding-top: 20px;
+}
+
+.container {
+  margin: 10px;
+}
+
+/* Index (Home) Page */
+body.index {
+  background-color: #f4f4f4;
+}
+
+body.index .container {
+  margin: 0;
+}
+
+/* Hero Section */
+body.index .hero {
+  background-image: url("../images/hero-image.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+body.index .hero .hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+body.index .hero .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+body.index .hero .hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+body.index .hero .hero-content .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+body.index .hero .hero-content .hero-buttons .btn {
+  padding: 12px 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: #ff6b6b;
+}
+
+body.index .hero .hero-content .hero-buttons .btn:hover {
+  background-color: #ff4b4b;
+}
+
+/* Register and Login Pages */
+body.register {
+  background-color: #fff3e0;
+}
+
+body.login {
+  background-color: #e0f7fa;
+}
+
+body.register,
+body.login .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+body.register .form-container h2,
+body.login .form-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+body.register form,
+body.login form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+body.register form input[type="text"],
+body.register form input[type="email"],
+body.register form input[type="password"],
+body.login form input[type="text"],
+body.login form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body.register form input[type="submit"],
+body.login form input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+body.register form input[type="submit"]:hover,
+body.login form input[type="submit"]:hover {
+  background-color: #ff6b6b;
+}
+
+body.register form label,
+body.login form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  color: white;
+}
+
+nav ul li a.active {
+  background-color: #575757;
+  color: yellow;
+}
